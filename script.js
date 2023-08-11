@@ -10,7 +10,8 @@ const plataforma = navigator.platform; // "Win32", "Linux x86_64", "iPhone", etc
 let cleanCard = false; 
 let favoriteIcon = false; 
 let favoritePokemons = []; 
-let typePokemon let count = 20; 
+let typePokemon; 
+let count = 20; 
 let searchNamePokemon = ''; 
 const colorPokemon = [ 
   { name: "water", color: "#729EC5" }, 
@@ -45,7 +46,7 @@ btn_search.addEventListener("click", () => {
   getPokemon(searchNamePokemon); }) 
   
 search.addEventListener("keydown", (event) => { 
-  plataforma ehDispositivoMovel;
+ 
   if(event.key === 'Enter'){ 
     cleanCard = true; 
     getPokemon(searchNamePokemon); } 
@@ -61,7 +62,8 @@ const countPokemon = async () => {
   
 const countPokemonFavorites = async () => { 
   if (favoritePokemons.length === 0) { 
-    favoriteIcon = false; return countPokemon(); 
+    favoriteIcon = false; 
+    return countPokemon(); 
   } else { 
     for (let i = 0; i < favoritePokemons.length; i++) { 
       favoriteIcon = true; 
