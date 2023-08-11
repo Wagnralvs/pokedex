@@ -74,7 +74,9 @@ const getPokemon = async (id) => {
   const options = {
     method : "GET",
     mode: "cors",
-    headers : {"Content-type": "application/json;charset=utf-8"}
+    headers : {
+       "Origin":"https://wagnralvs.github.io/pokedex/",
+      "Content-type": "application/json;charset=utf-8"}
   }
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`; 
   await fetch(url, options).then(response => { 
