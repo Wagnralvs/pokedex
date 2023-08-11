@@ -151,12 +151,13 @@ const infoPokemon = async (info) => {
 const favoritePokemon = async (id) => { 
   if (favoritePokemons.length === 0) { 
     favoritePokemons.push(id); 
-    console.log('pokemon adicionado na lista de favorito') 
+    console.log('pokemon adicionado na lista de favorito'); 
   } else { 
     for (const items of favoritePokemons) { 
       if (id === items) { 
         const newArray = favoritePokemons.filter((item) => item != id) 
-          favoritePokemons = newArray; favoriteMyPokemon() return; 
+          favoritePokemons = newArray; favoriteMyPokemon();
+        return; 
       } } 
     favoritePokemons.push(id); } 
 } 
