@@ -143,9 +143,7 @@ const infoPokemon = async (info) => {
   div.innerHTML = cardInfo; 
   container.appendChild(div); 
   
-  if(ehDispositivoMovel){ 
-    div.style.pointerEvents = 'none'; 
-  } 
+ 
   const favorite = document.getElementById(info.id); 
   favorite.addEventListener('click', async () => { 
     await favoritePokemon(info.id); 
